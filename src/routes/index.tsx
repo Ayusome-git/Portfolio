@@ -7,17 +7,17 @@ import marketplace from "@/assets/marketplace.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ayush Gupta — Frontend Developer" },
+      { title: "Ayush Gupta — Full Stack Developer" },
       {
         name: "description",
         content:
-          "Portfolio of Ayush Gupta, a frontend developer building bold, fast web interfaces with React, TypeScript and TailwindCSS.",
+          "Portfolio of Ayush Gupta, a full stack developer building bold, fast web applications with React, Node.js, and TypeScript.",
       },
-      { property: "og:title", content: "Ayush Gupta — Frontend Developer" },
+      { property: "og:title", content: "Ayush Gupta — Full Stack Developer" },
       {
         property: "og:description",
         content:
-          "Portfolio of Ayush Gupta, a frontend developer building bold, fast web interfaces with React, TypeScript and TailwindCSS.",
+          "Portfolio of Ayush Gupta, a full stack developer building bold, fast web applications with React, Node.js, and TypeScript.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -157,7 +157,7 @@ function Index() {
       <Skills />
       <Contact />
       <footer className="border-t-2 border-ink bg-background py-8 text-center text-sm font-medium text-foreground/60">
-        © 2026 Ayush Gupta — Frontend Developer · Built with React, TypeScript
+        © 2026 Ayush Gupta — Full Stack Developer · Built with React, TypeScript
         &amp; TailwindCSS
       </footer>
     </div>
