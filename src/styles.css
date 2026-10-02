@@ -1,0 +1,140 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Bold Pop Playful design system.
+ * Brand colors are registered as Tailwind tokens (bg-ink, text-coral, ...).
+ * Semantic shadcn tokens map onto the same palette below.
+ */
+
+@theme {
+  --font-display: "Syne", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  --color-ink: oklch(0.189 0.008 67.3);
+  --color-cream: oklch(0.953 0.02 87.5);
+  --color-coral: oklch(0.669 0.218 28.5);
+  --color-grape: oklch(0.53 0.267 279.1);
+  --color-lime: oklch(0.913 0.18 118.5);
+  --color-sky: oklch(0.682 0.172 252.9);
+  --color-sun: oklch(0.825 0.171 79.9);
+  /* Fixed dark text for bright accent surfaces (lime, sun) in both themes. */
+  --color-on-accent: oklch(0.189 0.008 67.3);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.953 0.02 87.5);
+  --foreground: oklch(0.189 0.008 67.3);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.189 0.008 67.3);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.189 0.008 67.3);
+  --primary: oklch(0.669 0.218 28.5);
+  --primary-foreground: oklch(0.953 0.02 87.5);
+  --secondary: oklch(0.913 0.18 118.5);
+  --secondary-foreground: oklch(0.189 0.008 67.3);
+  --muted: oklch(0.91 0.028 87.5);
+  --muted-foreground: oklch(0.45 0.02 67.3);
+  --accent: oklch(0.825 0.171 79.9);
+  --accent-foreground: oklch(0.189 0.008 67.3);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.189 0.008 67.3);
+  --input: oklch(0.189 0.008 67.3);
+  --ring: oklch(0.669 0.218 28.5);
+}
+
+.dark {
+  /* Brand token flip: ink becomes light, cream becomes dark — borders,
+     shadows and pop outlines invert with the theme. */
+  --color-ink: oklch(0.953 0.02 87.5);
+  --color-cream: oklch(0.189 0.008 67.3);
+  --background: oklch(0.189 0.008 67.3);
+  --foreground: oklch(0.953 0.02 87.5);
+  --card: oklch(0.26 0.015 67.3);
+  --card-foreground: oklch(0.953 0.02 87.5);
+  --popover: oklch(0.26 0.015 67.3);
+  --popover-foreground: oklch(0.953 0.02 87.5);
+  --primary: oklch(0.669 0.218 28.5);
+  --primary-foreground: oklch(0.953 0.02 87.5);
+  --secondary: oklch(0.913 0.18 118.5);
+  --secondary-foreground: oklch(0.189 0.008 67.3);
+  --muted: oklch(0.3 0.015 67.3);
+  --muted-foreground: oklch(0.75 0.02 87.5);
+  --accent: oklch(0.825 0.171 79.9);
+  --accent-foreground: oklch(0.189 0.008 67.3);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.953 0.02 87.5 / 18%);
+  --input: oklch(0.953 0.02 87.5 / 22%);
+  --ring: oklch(0.669 0.218 28.5);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
