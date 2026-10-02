@@ -149,7 +149,7 @@ function ThemeToggle() {
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background font-body text-foreground selection:bg-coral selection:text-cream">
+    <div className="min-h-screen overflow-x-hidden bg-background font-body text-foreground selection:bg-coral selection:text-cream">
       <Header />
       <Hero />
       <Marquee />
@@ -251,12 +251,12 @@ function Hero() {
         <div className="w-full lg:w-[48%] xl:w-[45%] flex flex-col items-start shrink-0">
           <div className="animate-fade-up flex w-fit items-center rounded-full border border-ink/20 bg-card/30 backdrop-blur-sm px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-foreground/80 shadow-sm transition-all hover:border-ink/50">
              <span className="mr-[-0.1em]">Full Stack Developer</span>
-             <span className="mx-3 block h-1 w-1 shrink-0 rounded-full bg-foreground/30"></span>
-             <span className="mr-[-0.1em]">React</span>
-             <span className="mx-3 block h-1 w-1 shrink-0 rounded-full bg-foreground/30"></span>
-             <span className="mr-[-0.1em]">Node</span>
-             <span className="mx-3 block h-1 w-1 shrink-0 rounded-full bg-foreground/30"></span>
-             <span className="mr-[-0.1em]">TypeScript</span>
+             <span className="hidden sm:block mx-3 h-1 w-1 shrink-0 rounded-full bg-foreground/30"></span>
+             <span className="hidden sm:block mr-[-0.1em]">React</span>
+             <span className="hidden sm:block mx-3 h-1 w-1 shrink-0 rounded-full bg-foreground/30"></span>
+             <span className="hidden sm:block mr-[-0.1em]">Node</span>
+             <span className="hidden sm:block mx-3 h-1 w-1 shrink-0 rounded-full bg-foreground/30"></span>
+             <span className="hidden sm:block mr-[-0.1em]">TypeScript</span>
           </div>
           
           <h1 className="animate-fade-up animation-delay-100 mt-8 font-display text-4xl md:text-5xl xl:text-[3.5rem] font-extrabold leading-[1.05] tracking-tight text-foreground">
@@ -285,10 +285,10 @@ function Hero() {
              <span>TypeScript</span>
              <span className="w-[3px] h-[3px] rounded-full bg-foreground/30"></span>
              <span>Node.js</span>
-             <span className="w-[3px] h-[3px] rounded-full bg-foreground/30"></span>
-             <span>Express</span>
-             <span className="w-[3px] h-[3px] rounded-full bg-foreground/30"></span>
-             <span>PostgreSQL</span>
+             <span className="hidden sm:block w-[3px] h-[3px] rounded-full bg-foreground/30"></span>
+             <span className="hidden sm:block">Express</span>
+             <span className="hidden sm:block w-[3px] h-[3px] rounded-full bg-foreground/30"></span>
+             <span className="hidden sm:block">PostgreSQL</span>
           </div>
         </div>
 
@@ -406,7 +406,7 @@ function Hero() {
                        </div>
                     </div>
                     {/* Incidents */}
-                    <div className="flex-[2] bg-[#111] border border-[#222] rounded p-4 flex flex-col">
+                    <div className="hidden sm:flex flex-[2] bg-[#111] border border-[#222] rounded p-4 flex-col">
                        <div className="text-[10px] text-[#888] uppercase tracking-wider mb-4">Active Incidents</div>
                        <div className="flex flex-col gap-2.5 flex-1 overflow-hidden">
                          <div className="border border-[#222] bg-[#0a0a0a] p-2.5 rounded">
@@ -521,36 +521,16 @@ function About() {
       className="scroll-mt-20 border-y-2 border-ink bg-ink text-cream dark:bg-background dark:text-foreground dark:border-border"
     >
       <div className="mx-auto max-w-6xl px-6 py-24">
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border-2 border-cream bg-lime px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-on-accent shadow-[3px_3px_0_var(--color-coral)] dark:border-background">
-              Accenture India · Analyst Intern
-            </div>
-            <h2 className="mt-6 font-display text-4xl font-extrabold leading-tight md:text-5xl">
-              Engineering solutions with Gen AI &amp; Agentic AI.
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-cream/75 dark:text-foreground/75">
-              I interned at Accenture focusing on software development and building Agentic AI solutions. I also led the frontend for the ICGAMS-2K25 national MANIT conference, improving accessibility and responsiveness. I care about building performant UIs that feel alive.
-            </p>
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border-2 border-cream bg-lime px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-on-accent shadow-[3px_3px_0_var(--color-coral)] dark:border-background">
+            Accenture India · Analyst Intern
           </div>
-          <div className="flex flex-wrap items-center gap-6">
-            <div className="flex-1 rounded-[2rem] border-2 border-cream bg-sun p-8 text-center shadow-[8px_8px_0_var(--color-coral)] dark:border-background">
-              <div className="font-display text-6xl font-extrabold text-on-accent">
-                600+
-              </div>
-              <div className="mt-2 text-sm font-bold uppercase tracking-widest text-on-accent/80">
-                LeetCode solved
-              </div>
-            </div>
-            <div className="flex-1 rounded-[2rem] border-2 border-cream bg-coral p-8 text-center shadow-[8px_8px_0_var(--color-lime)] dark:border-background">
-              <div className="font-display text-6xl font-extrabold text-cream dark:text-foreground">
-                Top 20%
-              </div>
-              <div className="mt-2 text-sm font-bold uppercase tracking-widest text-cream/80 dark:text-foreground/80">
-                Globally
-              </div>
-            </div>
-          </div>
+          <h2 className="mt-6 font-display text-4xl font-extrabold leading-tight md:text-5xl">
+            Engineering solutions with Gen AI &amp; Agentic AI.
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-cream/75 dark:text-foreground/75">
+            I interned at Accenture focusing on software development and building Agentic AI solutions. I also led the frontend for the ICGAMS-2K25 national MANIT conference, improving accessibility and responsiveness. I care about building performant UIs that feel alive.
+          </p>
         </div>
 
         <div className="mt-16 grid gap-4 md:grid-cols-2">
@@ -605,6 +585,25 @@ function Skills() {
           </div>
         ))}
       </div>
+
+      <div className="mt-20 flex flex-col sm:flex-row items-center gap-6">
+        <div className="flex-1 w-full rounded-[2rem] border-2 border-ink bg-sun p-8 text-center shadow-[8px_8px_0_var(--color-ink)] dark:border-border">
+          <div className="font-display text-6xl font-extrabold text-on-accent">
+            600+
+          </div>
+          <div className="mt-2 text-sm font-bold uppercase tracking-widest text-on-accent/80">
+            LeetCode solved
+          </div>
+        </div>
+        <div className="flex-1 w-full rounded-[2rem] border-2 border-ink bg-coral p-8 text-center shadow-[8px_8px_0_var(--color-ink)] dark:border-border">
+          <div className="font-display text-6xl font-extrabold text-cream dark:text-foreground">
+            Top 20%
+          </div>
+          <div className="mt-2 text-sm font-bold uppercase tracking-widest text-cream/80 dark:text-foreground/80">
+            Globally
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
@@ -615,14 +614,14 @@ function Contact() {
       id="contact"
       className="mx-auto max-w-6xl scroll-mt-20 px-6 py-28 text-center"
     >
-      <h2 className="font-display text-6xl font-extrabold leading-[0.9] tracking-tight md:text-8xl">
+      <h2 className="font-display text-4xl sm:text-5xl font-extrabold leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
         Let&apos;s build
         <br />
         something <span className="text-coral">loud.</span>
       </h2>
       <a
         href="mailto:ayush.ayush552@gmail.com"
-        className={`mt-10 inline-block rounded-full border-2 border-ink bg-secondary px-10 py-5 text-lg font-bold text-secondary-foreground shadow-[8px_8px_0_var(--color-ink)] transition hover:-translate-y-1 hover:shadow-[11px_11px_0_var(--color-ink)] md:text-xl`}
+        className={`mt-10 inline-flex max-w-full items-center justify-center rounded-full border-2 border-ink bg-secondary px-6 md:px-10 py-4 md:py-5 text-base md:text-lg lg:text-xl font-bold text-secondary-foreground shadow-[8px_8px_0_var(--color-ink)] transition hover:-translate-y-1 hover:shadow-[11px_11px_0_var(--color-ink)]`}
       >
         ayush.ayush552@gmail.com
       </a>
@@ -648,6 +647,14 @@ function Contact() {
           className="rounded-full border-2 border-ink bg-card px-5 py-2 transition hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--color-ink)]"
         >
           GitHub ↗
+        </a>
+        <a
+          href={RESUME_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full border-2 border-ink bg-card px-5 py-2 transition hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--color-ink)]"
+        >
+          Resume ↗
         </a>
       </div>
     </section>
