@@ -27,19 +27,29 @@ export const Route = createFileRoute("/")({
 });
 
 const STACK_MARQUEE = [
-  "React",
-  "NextJs",
+  "Java",
+  "JavaScript",
   "TypeScript",
   "Python",
+  "C++",
+  "React.js",
+  "NextJs",
+  "HTML",
+  "CSS",
   "TailwindCSS",
   "Zustand",
   "ShadcnUI",
   "Node.js",
+  "Express.js",
   "FastApi",
-  "Prisma",
   "MySQL",
-  "PostgreSQL",
   "MongoDB",
+  "PostgreSQL",
+  "Prisma",
+  "Git",
+  "Postman",
+  "VS Code",
+  "Docker",
 ];
 
 const RESUME_URL = "https://drive.google.com/file/d/1CM_FxR-bgnqQdczndywGHMxNsg3A6ctn/view?usp=drive_link";
